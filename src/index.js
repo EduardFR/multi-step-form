@@ -7,6 +7,7 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 const Global = createGlobalStyle`
 :root {
 --color-Background: #F2F2F2;
+--color-Border: #D6D9E6;
 --color-White: #FFFFFF;
 --color-Denim: #022959;
 --color-Purple: #483EFF;
@@ -17,6 +18,8 @@ const Global = createGlobalStyle`
 --color-Grey: #9699AA;
 --color-LightGrey: #F8F9FF;
 --color-Red: #EE374A;
+--color-HoverPurple: #928CFF;
+--color-HoverButton: #164A8A;
 }
 
 h1 {
