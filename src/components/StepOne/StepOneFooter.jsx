@@ -8,7 +8,7 @@ const StepOneFooterStyle = styled.div`
 function StepOneFooter() {
   return (
     <StepOneFooterStyle>
-      <ButtonNextStep step="step-two" />
+      <ButtonNextStep step="/step-two" />
     </StepOneFooterStyle>
   );
 }

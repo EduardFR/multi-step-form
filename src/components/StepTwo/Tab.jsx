@@ -1,16 +1,27 @@
 import styled from "styled-components";
 import TabAvatar from "./TabAvatar";
+import TabDescription from "./TabDescription";
 
 const TabStyle = styled.button`
-  padding: 20px 69px 16px 16px;
+  padding: 20px 16px 16px;
+  width: 138px;
+  text-align: left;
   border: 1px solid var(--color-Border);
   border-radius: 8px;
+  background: none;
+  &:hover {
+    border: 1px solid var(--color-Purple);
+  }
+  &.active {
+    background-color: var(--color-LightGrey);
+  }
 `;
 
-function Tab({ name, price, color }) {
+function Tab({ name, price, color, active }) {
   return (
-    <TabStyle>
+    <TabStyle className={active ? "active" : ""}>
       <TabAvatar color={color} />
+      <TabDescription name={name} price={price} />
     </TabStyle>
   );
 }
