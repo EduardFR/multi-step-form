@@ -7,7 +7,6 @@ const ButtonStyle = styled(NavLink)`
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-  letter-spacing: 0px;
   text-align: left;
   text-decoration: none;
   cursor: pointer;

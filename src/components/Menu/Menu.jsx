@@ -5,7 +5,6 @@ const MenuStyle = styled.div`
   background-color: var(--color-Purple);
   text-align: left;
   height: 568px;
-  width: 274px;
   border-radius: 10px;
 `;
 

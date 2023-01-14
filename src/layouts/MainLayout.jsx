@@ -3,10 +3,10 @@ import styled from "styled-components";
 import Menu from "../components/Menu/Menu.jsx";
 
 const MainLayoutStyle = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 274px auto;
   background-color: var(--color-White);
-  max-width: 940px;
+  max-width: 908px;
   column-gap: 100px;
   padding: 16px;
   margin: auto;

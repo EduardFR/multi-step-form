@@ -2,19 +2,19 @@ import styled from "styled-components";
 import ButtonGoBack from "../Buttons/ButtonGoBack";
 import ButtonNextStep from "../Buttons/ButtonNextStep";
 
-const StepTwoFooterStyle = styled.div`
+const StepThreeFooterStyle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 `;
 
-function StepTwoFooter() {
+function StepThreeFooter() {
   return (
-    <StepTwoFooterStyle>
-      <ButtonGoBack back="/" />
-      <ButtonNextStep step="/step-three" />
-    </StepTwoFooterStyle>
+    <StepThreeFooterStyle>
+      <ButtonGoBack back="/step-two" />
+      <ButtonNextStep step="/step-four" />
+    </StepThreeFooterStyle>
   );
 }
 
-export default StepTwoFooter;
+export default StepThreeFooter;

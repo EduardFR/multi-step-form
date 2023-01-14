@@ -6,7 +6,7 @@ import StepTwoHeader from "./StepTwoHeader";
 const StepTwoPageStyle = styled.div`
   text-align: left;
   margin-top: 40px;
-  margin-right: 100px;
+  margin-right: 84px;
 `;
 
 function StepTwoPage() {

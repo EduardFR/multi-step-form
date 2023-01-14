@@ -9,7 +9,7 @@ const ToggleSwitchBlockStyle = styled.div`
   line-height: 16px;
   border-radius: 8px;
   color: var(--color-Grey);
-  background-color: var(--color-LightGrey);
+  background-color: var(--color-VeryLightGrey);
 `;
 
 const ToggleSwitchCheckbox = styled.input`
@@ -35,7 +35,6 @@ const ToggleSwitchLabel = styled.label`
 `;
 
 const ToggleSwitchButton = styled.span`
-  content: "";
   position: absolute;
   top: 4px;
   left: 4px;

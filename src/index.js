@@ -16,7 +16,8 @@ const Global = createGlobalStyle`
 --color-Orange: #FFAF7E;
 --color-Pink: #F9818E;
 --color-Grey: #9699AA;
---color-LightGrey: #F8F9FF;
+--color-LightGrey: #D6D9E6;
+--color-VeryLightGrey: #F8F9FF;
 --color-Red: #EE374A;
 --color-HoverPurple: #928CFF;
 --color-HoverButton: #164A8A;
@@ -52,9 +53,9 @@ color: var(--color-Grey);
 }
 
 body {
-background-color: var(--color-Background);
+background-color: var(--color-Background); 
 }
-  
+
 * {
 margin: 0;
 padding: 0;

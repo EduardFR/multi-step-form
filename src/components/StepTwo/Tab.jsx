@@ -13,7 +13,7 @@ const TabStyle = styled.button`
     border: 1px solid var(--color-Purple);
   }
   &.active {
-    background-color: var(--color-LightGrey);
+    background-color: var(--color-VeryLightGrey);
   }
 `;
 
