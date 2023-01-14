@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
+import StepFivePage from "./components/StepFive/StepFivePage";
 import StepFourPage from "./components/StepFour/StepFourPage";
 import StepOnePage from "./components/StepOne/StepOnePage";
 import StepThreePage from "./components/StepThree/StepThreePage";
@@ -20,6 +21,7 @@ function App() {
             <Route path="Select-plan" element={<StepTwoPage />} />
             <Route path="Add-ons" element={<StepThreePage />} />
             <Route path="Summary" element={<StepFourPage />} />
+            <Route path="confirm" element={<StepFivePage />} />
           </Route>
         </Routes>
       </AppWrapper>
