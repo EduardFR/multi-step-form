@@ -5,7 +5,6 @@ const InputGroupStyle = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 24px;
-  margin-bottom: 84px;
 `;
 
 function InputGroup() {

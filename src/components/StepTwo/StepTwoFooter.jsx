@@ -6,13 +6,14 @@ const StepTwoFooterStyle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  margin-top: 74px;
 `;
 
 function StepTwoFooter() {
   return (
     <StepTwoFooterStyle>
       <ButtonGoBack back="/" />
-      <ButtonNextStep step="/step-three" />
+      <ButtonNextStep step="/Add-ons" />
     </StepTwoFooterStyle>
   );
 }

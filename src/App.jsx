@@ -17,9 +17,9 @@ function App() {
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<StepOnePage />} />
-            <Route path="step-two" element={<StepTwoPage />} />
-            <Route path="step-three" element={<StepThreePage />} />
-            <Route path="step-four" element={<StepFourPage />} />
+            <Route path="Select-plan" element={<StepTwoPage />} />
+            <Route path="Add-ons" element={<StepThreePage />} />
+            <Route path="Summary" element={<StepFourPage />} />
           </Route>
         </Routes>
       </AppWrapper>

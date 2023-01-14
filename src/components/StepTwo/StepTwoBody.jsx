@@ -6,7 +6,6 @@ const StepTwoBodyStyle = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 32px;
-  margin-bottom: 116px;
 `;
 
 function StepTwoBody() {
