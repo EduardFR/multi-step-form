@@ -29,11 +29,16 @@ const InputStyle = styled.input`
   }
 `;
 
-function Input({ name, type, placeholder }) {
+function Input({ name, type, placeholder, onChange, value }) {
   return (
     <InputBlockStyle>
       <NameStyle>{name}</NameStyle>
-      <InputStyle type={type} placeholder={placeholder} />
+      <InputStyle
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+      />
     </InputBlockStyle>
   );
 }

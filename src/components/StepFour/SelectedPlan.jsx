@@ -50,7 +50,7 @@ function SelectedPlan() {
       <SelectedPlanBlock>
         <PlanBlock>
           <PlanName>Arcade (Monthly)</PlanName>
-          <ChangePlan to="/step-two">Change</ChangePlan>
+          <ChangePlan to="/Add-ons">Change</ChangePlan>
         </PlanBlock>
         <PlanPrice>$9/mo</PlanPrice>
       </SelectedPlanBlock>
