@@ -8,7 +8,7 @@ import { store } from "./store";
 
 const Global = createGlobalStyle`
 :root {
---color-Background: #F2F2F2;
+--color-Background: #EFF5FF;
 --color-Border: #D6D9E6;
 --color-White: #FFFFFF;
 --color-Denim: #022959;
@@ -56,12 +56,26 @@ color: var(--color-Grey);
 
 body {
 background-color: var(--color-Background); 
+@media ${(props) => props.theme.media.phone} {
+  height: 100%;
+}
 }
 
 * {
 margin: 0;
 padding: 0;
 font-family:  "Ubuntu";  
+}
+
+html {
+  @media ${(props) => props.theme.media.phone} {
+    height: 100%;
+}
+
+div#root {
+  @media ${(props) => props.theme.media.phone} {
+    height: 100%;
+}
 }
 `;
 

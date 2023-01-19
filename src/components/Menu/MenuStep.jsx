@@ -20,7 +20,7 @@ const StepCircleStyle = styled.h3`
   &.active {
     color: var(--color-Denim);
     background-color: var(--color-SkyBlue);
-    border: none;
+    border: 1px solid var(--color-SkyBlue);
   }
 `;
 
@@ -28,6 +28,9 @@ const StepContentStyle = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 4px;
+  @media ${(props) => props.theme.media.phone} {
+    display: none;
+  }
 `;
 
 const StepTextStyle = styled.p`

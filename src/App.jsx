@@ -9,6 +9,9 @@ import MainLayout from "./layouts/MainLayout";
 
 const AppWrapper = styled.div`
   text-align: center;
+  @media ${(props) => props.theme.media.phone} {
+    height: 100%;
+  }
 `;
 
 function App() {
