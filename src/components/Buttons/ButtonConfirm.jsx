@@ -1,14 +1,13 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const ButtonStyle = styled(NavLink)`
+const ButtonConfirm = styled.button`
   display: inline-block;
   padding: 14px 31.5px 16px 30.5px;
   border-radius: 8px;
+  border: none;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-  text-decoration: none;
   cursor: pointer;
   color: var(--color-White);
   background-color: var(--color-Purple);
@@ -16,9 +15,5 @@ const ButtonStyle = styled(NavLink)`
     background-color: var(--color-HoverPurple);
   }
 `;
-
-function ButtonConfirm({ confirm }) {
-  return <ButtonStyle to={confirm}>Confirm</ButtonStyle>;
-}
 
 export default ButtonConfirm;

@@ -1,7 +1,6 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const ButtonStyle = styled(NavLink)`
+const ButtonNextStep = styled.button`
   display: inline-block;
   padding: 14px 24px 16px 25px;
   border-radius: 8px;
@@ -12,13 +11,10 @@ const ButtonStyle = styled(NavLink)`
   cursor: pointer;
   color: var(--color-White);
   background-color: var(--color-Denim);
+  border: none;
   &:hover {
     background-color: var(--color-HoverButton);
   }
 `;
-
-function ButtonNextStep({ step }) {
-  return <ButtonStyle to={step}>Next Step</ButtonStyle>;
-}
 
 export default ButtonNextStep;
