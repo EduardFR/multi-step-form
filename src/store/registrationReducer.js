@@ -1,15 +1,15 @@
 const defaultState = {
   name: {
     value: "",
-    error: "Name is required!",
+    error: "",
   },
   email: {
     value: "",
-    error: "Email is required!",
+    error: "",
   },
   phone: {
     value: "",
-    error: "Phone is required!",
+    error: "",
   },
 };
 const ADD_VALUE_NAME = "ADD_VALUE_NAME";

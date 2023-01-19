@@ -5,11 +5,25 @@ const InputBlockStyle = styled.div`
   flex-direction: column;
 `;
 
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+`;
+
 const NameStyle = styled.p`
   color: var(--color-Denim);
   font-size: 14px;
   line-height: 16px;
-  margin-bottom: 8px;
+`;
+const ErrorStyle = styled.h2`
+  display: none;
+  text-align: right;
+  color: var(--color-Red);
+  &.active {
+    display: block;
+  }
 `;
 
 const InputStyle = styled.input`
@@ -27,17 +41,34 @@ const InputStyle = styled.input`
     font-weight: 500;
     line-height: 25px;
   }
+  &.error {
+    border: 1px solid var(--color-Red);
+  }
 `;
 
-function Input({ name, type, placeholder, onChange, value }) {
+function Input({
+  name,
+  type,
+  placeholder,
+  onChange,
+  value,
+  errorValue,
+  error,
+  pattern,
+}) {
   return (
     <InputBlockStyle>
-      <NameStyle>{name}</NameStyle>
+      <Header>
+        <NameStyle>{name}</NameStyle>
+        <ErrorStyle className={error ? "active" : ""}>{errorValue}</ErrorStyle>
+      </Header>
       <InputStyle
+        className={error ? "error" : ""}
         type={type}
         placeholder={placeholder}
         value={value}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={(e) => onChange(e)}
+        pattern={pattern}
       />
     </InputBlockStyle>
   );

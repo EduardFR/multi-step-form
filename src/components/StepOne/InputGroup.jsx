@@ -1,66 +1,76 @@
 import styled from "styled-components";
 import Input from "./Input";
-import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
-  addUserEmailAction,
-  addUserNameAction,
-  addUserPhoneAction,
+  addValueNameAction,
+  addValueEmailAction,
+  addValuePhoneAction,
 } from "../../store/registrationReducer";
 
 const InputGroupStyle = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 24px;
+  @media ${(props) => props.theme.media.phone} {
+    margin-right: 16px;
+    margin-left: 16px;
+    padding: 32px 24px;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: var(--color-White);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 `;
 
-function InputGroup() {
-  const navigate = useNavigate();
+function InputGroup({
+  errorName,
+  errorEmail,
+  errorPhone,
+  valueName,
+  valueEmail,
+  valuePhone,
+}) {
   const dispatch = useDispatch();
 
-  const valueName = useSelector((state) => state.registr.valueName);
-  const valueEmail = useSelector((state) => state.registr.valueEmail);
-  const valuePhone = useSelector((state) => state.registr.valuePhone);
-
-  const onChangeName = (value) => {
-    dispatch(addUserNameAction(value));
+  const onChangeName = (e) => {
+    dispatch(addValueNameAction(e.target.value));
   };
-  const onChangeEmail = (value) => {
-    dispatch(addUserEmailAction(value));
+  const onChangeEmail = (e) => {
+    dispatch(addValueEmailAction(e.target.value));
   };
-  const onChangePhone = (value) => {
-    dispatch(addUserPhoneAction(value));
+  const onChangePhone = (e) => {
+    dispatch(addValuePhoneAction(e.target.value));
   };
-
-  const goToNextStep = (e) => {
-    navigate("/Select-plan");
-  };
-
   return (
     <InputGroupStyle>
       <Input
         name="Name"
         type="text"
         placeholder="e.g. Stephen King"
-        value={valueName}
+        errorValue={errorName}
+        error={!valueName && errorName ? true : false}
+        value={valueName ? valueName : ""}
         onChange={onChangeName}
       />
       <Input
         name="Email Address"
         type="email"
         placeholder="e.g. stephenking@lorem.com"
-        value={valueEmail}
+        errorValue={errorEmail}
+        error={(!valueEmail && !!errorEmail) || !!errorEmail ? true : false}
+        value={valueEmail ? valueEmail : ""}
         onChange={onChangeEmail}
       />
       <Input
         name="Phone Number"
         type="tel"
-        placeholder="e.g. +1 234 567 890"
-        value={valuePhone}
+        placeholder="e.g. +1-234-567-890"
+        errorValue={errorPhone}
+        error={(!valuePhone && !!errorPhone) || !!errorPhone ? true : false}
+        value={valuePhone ? valuePhone : ""}
         onChange={onChangePhone}
       />
-
-      <button onClick={goToNextStep}>Validate1</button>
     </InputGroupStyle>
   );
 }
