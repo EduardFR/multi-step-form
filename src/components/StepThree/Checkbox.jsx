@@ -31,10 +31,16 @@ const Check = styled(CheckSVG)`
   margin-bottom: 1px;
 `;
 
-function Checkbox() {
+function Checkbox({ onChange, name, select }) {
   return (
     <CheckboxLabel>
-      <CheckboxStyle type="checkbox" value="Multiplayer" />
+      <CheckboxStyle
+        id={`addition-checkbox-${name}`}
+        type="checkbox"
+        value={name}
+        checked={select}
+        onChange={(e) => onChange(e.target.checked, name)}
+      />
       <CheckboxSpan>
         <Check />
       </CheckboxSpan>
