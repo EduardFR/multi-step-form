@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 const AdditionStyle = styled.div`
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
+  &.active {
+    display: flex;
+  }
 `;
 
 const AdditionName = styled.p`
@@ -19,11 +22,13 @@ const AdditionPrice = styled.p`
   color: var(--color-Denim);
 `;
 
-function Addition({ name, price }) {
+function Addition({ name, price, select, abbreviation }) {
   return (
-    <AdditionStyle>
+    <AdditionStyle className={select ? "active" : ""}>
       <AdditionName>{name}</AdditionName>
-      <AdditionPrice>+${price}/mo</AdditionPrice>
+      <AdditionPrice>
+        +${price}/{abbreviation}
+      </AdditionPrice>
     </AdditionStyle>
   );
 }

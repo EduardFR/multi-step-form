@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { plans } from "../../constants/plans";
 
 const SelectedPlanStyle = styled.div`
   padding: 16px 24px 0;
@@ -44,15 +45,26 @@ const PlanPrice = styled.h1`
   text-align: right;
 `;
 
-function SelectedPlan() {
+function SelectedPlan({ billing, activePlan }) {
+  const plan = plans.find((plan) => plan.name.match(activePlan));
+
+  const isMonthly = () => {
+    return billing === "Monthly";
+  };
+
   return (
     <SelectedPlanStyle>
       <SelectedPlanBlock>
         <PlanBlock>
-          <PlanName>Arcade (Monthly)</PlanName>
-          <ChangePlan to="/Add-ons">Change</ChangePlan>
+          <PlanName>
+            {plan.name}({billing})
+          </PlanName>
+          <ChangePlan to="/Select-plan">Change</ChangePlan>
         </PlanBlock>
-        <PlanPrice>$9/mo</PlanPrice>
+        <PlanPrice>
+          ${isMonthly() ? plan.price.monthly : plan.price.yearly}/
+          {isMonthly() ? plan.abbreviations.monthly : plan.abbreviations.yearly}
+        </PlanPrice>
       </SelectedPlanBlock>
     </SelectedPlanStyle>
   );

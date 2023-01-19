@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Addition from "./Addition";
+import { additions } from "../../constants/additions";
 
 const SelectedAdditionsStyle = styled.div`
   display: flex;
@@ -11,12 +12,26 @@ const SelectedAdditionsStyle = styled.div`
   border-bottom-right-radius: 8px;
 `;
 
-function SelectedAdditions() {
+function SelectedAdditions({ billing, selectedAdditions }) {
+  const isMonthly = () => {
+    return billing === "Monthly";
+  };
+
   return (
     <SelectedAdditionsStyle>
-      <Addition name="Online service" price={1} />
-      <Addition name="Larger storage" price={2} />
-      <Addition name="Customizable profile" price={2} />
+      {additions.map((addition) => (
+        <Addition
+          key={addition.name}
+          name={addition.name}
+          price={isMonthly() ? addition.price.monthly : addition.price.yearly}
+          select={selectedAdditions.includes(addition.name)}
+          abbreviation={
+            isMonthly()
+              ? addition.abbreviations.monthly
+              : addition.abbreviations.yearly
+          }
+        />
+      ))}
     </SelectedAdditionsStyle>
   );
 }
