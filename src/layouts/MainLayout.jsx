@@ -12,6 +12,20 @@ const MainLayoutStyle = styled.div`
   margin: auto;
   margin-top: 105px;
   border-radius: 15px;
+  @media ${(props) => props.theme.media.tablet} {
+    column-gap: 16px;
+    max-width: 100%;
+  }
+  @media ${(props) => props.theme.media.phone} {
+    border-radius: 0;
+    padding: 0;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    max-width: 100%;
+    height: 100%;
+  }
 `;
 
 const MainLayout = () => {

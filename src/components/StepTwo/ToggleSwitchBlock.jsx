@@ -1,59 +1,69 @@
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
+import { changeBillingAction } from "../../store/billingReducer";
+import ToggleSwitch from "./ToggleSwitch";
 
 const ToggleSwitchBlockStyle = styled.div`
+  -webkit-user-select: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
   border-radius: 8px;
-  color: var(--color-Grey);
   background-color: var(--color-VeryLightGrey);
 `;
 
-const ToggleSwitchCheckbox = styled.input`
-  height: 0;
-  width: 0;
-  visibility: hidden;
-  &:checked + span {
-    left: calc(100% - 15px);
+const Monthly = styled.label`
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: var(--color-Grey);
+  letter-spacing: 0;
+  &.active {
+    color: var(--color-Denim);
+  }
+`;
+const Yearly = styled.label`
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: var(--color-Grey);
+  letter-spacing: 0;
+  &.active {
+    color: var(--color-Denim);
   }
 `;
 
-const ToggleSwitchLabel = styled.label`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  width: 38px;
-  height: 20px;
-  margin: 14px 24px;
-  background-color: var(--color-Denim);
-  border-radius: 10px;
-  position: relative;
-`;
+function ToggleSwitchBlock({ billing }) {
+  const dispatch = useDispatch();
 
-const ToggleSwitchButton = styled.span`
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 12px;
-  height: 12px;
-  background-color: var(--color-White);
-  border-radius: 50px;
-  transition: 0.2s;
-`;
+  const onChange = (e) => {
+    if (e.target.checked) {
+      dispatch(changeBillingAction("Yearly"));
+    } else {
+      dispatch(changeBillingAction("Monthly"));
+    }
+  };
 
-function ToggleSwitchBlock() {
   return (
     <ToggleSwitchBlockStyle>
-      Monthly
-      <ToggleSwitchLabel>
-        <ToggleSwitchCheckbox type="checkbox" />
-        <ToggleSwitchButton />
-      </ToggleSwitchLabel>
-      Yearly
+      <Monthly
+        htmlFor="switch-toggle"
+        className={billing === "Monthly" ? "active" : ""}
+      >
+        Monthly
+      </Monthly>
+      <ToggleSwitch
+        onChange={onChange}
+        checked={billing === "Yearly" ? true : false}
+      />
+      <Yearly
+        htmlFor="switch-toggle"
+        className={billing === "Yearly" ? "active" : ""}
+      >
+        Yearly
+      </Yearly>
     </ToggleSwitchBlockStyle>
   );
 }
