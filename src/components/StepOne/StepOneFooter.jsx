@@ -45,7 +45,7 @@ function StepOneFooter({ valueName, valuePhone, valueEmail }) {
     if (!valuePhone) {
       requiredPhone = "Phone is required!";
     }
-    if (valuePhone && !valuePhone.match(/^\d-\d{3}-\d{3}-\d{3}$/)) {
+    if (valuePhone && !valuePhone.match(/^\+\d-\d{3}-\d{3}-\d{3}$/)) {
       requiredPhone = "Phone is invalid!";
     }
 

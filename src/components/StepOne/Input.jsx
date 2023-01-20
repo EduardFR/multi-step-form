@@ -1,3 +1,4 @@
+import ReactInputMask from "react-input-mask";
 import styled from "styled-components";
 
 const InputBlockStyle = styled.div`
@@ -26,7 +27,7 @@ const ErrorStyle = styled.h2`
   }
 `;
 
-const InputStyle = styled.input`
+const InputStyle = styled(ReactInputMask)`
   border: 1px solid var(--color-Border);
   border-radius: 8px;
   padding: 15px 16px;
@@ -55,6 +56,8 @@ function Input({
   errorValue,
   error,
   pattern,
+  mask,
+  maskPlaceholder,
 }) {
   return (
     <InputBlockStyle>
@@ -69,6 +72,8 @@ function Input({
         value={value}
         onChange={(e) => onChange(e)}
         pattern={pattern}
+        mask={mask}
+        maskPlaceholder={maskPlaceholder}
       />
     </InputBlockStyle>
   );

@@ -4,7 +4,8 @@ import "./index.css";
 import App from "./App";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Provider } from "react-redux";
-import { store } from "./store";
+import { PersistGate } from "redux-persist/integration/react";
+import { persistor, store } from "./store";
 
 const Global = createGlobalStyle`
 :root {
@@ -71,6 +72,7 @@ html {
   @media ${(props) => props.theme.media.phone} {
     height: 100%;
 }
+}
 
 div#root {
   @media ${(props) => props.theme.media.phone} {
@@ -90,8 +92,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ThemeProvider theme={theme}>
     <Provider store={store}>
-      <Global />
-      <App />
+      <PersistGate loading={null} persistor={persistor}>
+        <Global />
+        <App />
+      </PersistGate>
     </Provider>
   </ThemeProvider>
 );

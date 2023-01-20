@@ -70,6 +70,8 @@ function InputGroup({
         error={(!valuePhone && !!errorPhone) || !!errorPhone ? true : false}
         value={valuePhone ? valuePhone : ""}
         onChange={onChangePhone}
+        mask="+1-999-999-999"
+        maskPlaceholder="_"
       />
     </InputGroupStyle>
   );
