@@ -19,7 +19,8 @@ const StepOnePageStyle = styled.div`
     margin-top: 0;
   }
   @media ${(props) => props.theme.media.phone} {
-    grid-template-rows: 68px 354px auto;
+    display: flex;
+    flex-direction: column;
     margin-right: 0;
     row-gap: 0;
     margin-top: -60px;

@@ -17,9 +17,7 @@ const StepThreeTitleStyle = styled.h1`
   margin-bottom: 11px;
 `;
 
-const StepThreeTextStyle = styled.p`
-  margin-bottom: 35px;
-`;
+const StepThreeTextStyle = styled.p``;
 
 function StepThreeHeader() {
   return (

@@ -11,7 +11,7 @@ const StepTwoBodyStyle = styled.div`
     margin-right: 16px;
     margin-left: 16px;
     margin-bottom: 10px;
-    padding: 32px 24px;
+    padding: 0 24px 32px;
     border-radius: 10px;
     z-index: 10;
     background-color: var(--color-White);

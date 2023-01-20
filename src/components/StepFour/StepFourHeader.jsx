@@ -17,9 +17,7 @@ const StepFourTitleStyle = styled.h1`
   margin-bottom: 11px;
 `;
 
-const StepFourTextStyle = styled.p`
-  margin-bottom: 35px;
-`;
+const StepFourTextStyle = styled.p``;
 
 function StepFourHeader() {
   return (

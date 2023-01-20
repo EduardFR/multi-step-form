@@ -23,7 +23,7 @@ const MainLayoutStyle = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 0;
-    max-width: 100%;
+    width: 100%;
     height: 100%;
   }
 `;

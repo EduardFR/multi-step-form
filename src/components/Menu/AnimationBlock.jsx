@@ -16,19 +16,19 @@ const spin = keyframes`
   `;
 
 const lineBounceOne = keyframes`
- 0{ transform: translate(0px, 0px) }
+ 0%{ transform: translate(0px, 0px) rotate(135deg)}
  25% { transform: translate(-20px, -10px) rotate(260deg) }
  75% { transform: translate(10px, -10px) rotate(135deg) }
  100% { transform: translate(0px, 0px) rotate(135deg) }
 `;
 const lineBounceTwo = keyframes`
- 0{ transform: translate(0px, 0px) }
+ 0%{ transform: translate(0px, 0px)  rotate(120deg)}
  25% { transform: translate(-10px, 10px) rotate(240deg) }
  75% { transform: translate(-10px, -10px) rotate(40deg) }
  100% { transform: translate(0px, 0px) rotate(120deg) }
 `;
 const lineBounceThree = keyframes`
- 0{ transform: translate(0px, 0px) }
+ 0%{ transform: translate(0px, 0px) rotate(40deg)}
  25% { transform: translate(10px, -20px) rotate(160deg) }
  75% { transform: translate(20px, -20px) rotate(300deg) }
  100% { transform: translate(0px, 0px) rotate(40deg) }

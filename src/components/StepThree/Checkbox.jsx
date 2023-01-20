@@ -3,17 +3,17 @@ import { ReactComponent as CheckSVG } from "../../assets/Path.svg";
 
 const CheckboxLabel = styled.label`
   position: relative;
-  width: 20px;
   border-radius: 4px;
+  margin-right: 48px;
 `;
 
 const CheckboxSpan = styled.span`
   -webkit-user-select: none;
   position: absolute;
   text-align: center;
-  width: 100%;
-  height: 100%;
   border-radius: 4px;
+  width: 20px;
+  height: 20px;
   border: 1px solid var(--color-LightGrey);
 `;
 

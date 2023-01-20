@@ -17,9 +17,7 @@ const StepTwoTitleStyle = styled.h1`
   margin-bottom: 11px;
 `;
 
-const StepTwoTextStyle = styled.p`
-  margin-bottom: 35px;
-`;
+const StepTwoTextStyle = styled.p``;
 
 function StepTwoHeader() {
   return (

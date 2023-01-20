@@ -10,7 +10,8 @@ const StepFourBodyStyle = styled.div`
   @media ${(props) => props.theme.media.phone} {
     margin-right: 16px;
     margin-left: 16px;
-    padding: 32px 24px;
+    margin-bottom: 10px;
+    padding: 0 24px 32px;
     border-radius: 10px;
     z-index: 10;
     background-color: var(--color-White);
