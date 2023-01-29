@@ -4,7 +4,7 @@ import { changeBillingAction } from "../../store/billingReducer";
 import ToggleSwitch from "./ToggleSwitch";
 
 const ToggleSwitchBlockStyle = styled.div`
-  -webkit-user-select: none;
+  user-select: none;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,11 +1,11 @@
 const defaultState = {
   step: "1",
 };
-const GET_ACTICE_STEP = "GET_ACTICE_STEP";
+const GET_ACTIVE_STEP = "GET_ACTIVE_STEP";
 
 export const activeStepReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case GET_ACTICE_STEP:
+    case GET_ACTIVE_STEP:
       return { ...state, step: action.payload };
 
     default:
@@ -14,6 +14,6 @@ export const activeStepReducer = (state = defaultState, action) => {
 };
 
 export const setActiveStepAction = (payload) => ({
-  type: GET_ACTICE_STEP,
+  type: GET_ACTIVE_STEP,
   payload,
 });

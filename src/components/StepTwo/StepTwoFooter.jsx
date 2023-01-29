@@ -24,7 +24,7 @@ function StepTwoFooter() {
   return (
     <StepTwoFooterStyle>
       <ButtonGoBack onClick={() => navigate("/")}>Go Back</ButtonGoBack>
-      <ButtonNextStep onClick={() => navigate("/Add-ons")}>
+      <ButtonNextStep onClick={() => navigate("/add-ons")}>
         Next Step
       </ButtonNextStep>
     </StepTwoFooterStyle>

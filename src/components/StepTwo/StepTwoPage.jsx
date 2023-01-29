@@ -40,13 +40,7 @@ function StepTwoPage() {
   useEffect(() => {
     dispatch(setActiveStepAction("2"));
 
-    if (!valueName) {
-      navigate("/");
-    }
-    if (!valueEmail) {
-      navigate("/");
-    }
-    if (!valuePhone) {
+    if (!valueName || !valueEmail || !valuePhone) {
       navigate("/");
     }
   }, [dispatch, navigate, valueName, valueEmail, valuePhone]);

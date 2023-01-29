@@ -39,13 +39,7 @@ function StepFourPage() {
   useEffect(() => {
     dispatch(setActiveStepAction("4"));
 
-    if (!valueName) {
-      navigate("/");
-    }
-    if (!valueEmail) {
-      navigate("/");
-    }
-    if (!valuePhone) {
+    if (!valueName || !valueEmail || !valuePhone) {
       navigate("/");
     }
   }, [dispatch, navigate, valueName, valueEmail, valuePhone]);

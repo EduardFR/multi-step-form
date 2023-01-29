@@ -24,10 +24,10 @@ function StepThreeFooter() {
 
   return (
     <StepThreeFooterStyle>
-      <ButtonGoBack onClick={() => navigate("/Select-plan")}>
+      <ButtonGoBack onClick={() => navigate("/select-plan")}>
         Go Back
       </ButtonGoBack>
-      <ButtonNextStep onClick={() => navigate("/Summary")}>
+      <ButtonNextStep onClick={() => navigate("/summary")}>
         Next Step
       </ButtonNextStep>
     </StepThreeFooterStyle>

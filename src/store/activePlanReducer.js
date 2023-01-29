@@ -1,11 +1,11 @@
 const defaultState = {
   value: "Arcade",
 };
-const GET_AVTICE_PLAN = "GET_ACTIVE_PLAN";
+const GET_ACTIVE_PLAN = "GET_ACTIVE_PLAN";
 
 export const activePlanReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case GET_AVTICE_PLAN:
+    case GET_ACTIVE_PLAN:
       return { ...state, value: action.payload };
 
     default:
@@ -14,6 +14,6 @@ export const activePlanReducer = (state = defaultState, action) => {
 };
 
 export const getActivePlanAction = (payload) => ({
-  type: GET_AVTICE_PLAN,
+  type: GET_ACTIVE_PLAN,
   payload,
 });

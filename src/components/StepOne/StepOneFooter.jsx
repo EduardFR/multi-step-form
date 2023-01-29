@@ -54,7 +54,7 @@ function StepOneFooter({ valueName, valuePhone, valueEmail }) {
     dispatch(addErrorPhoneAction(requiredPhone));
 
     if (!requiredName && !requiredPhone && !requiredEmail)
-      navigate("/Select-plan");
+      navigate("/select-plan");
   };
 
   return (

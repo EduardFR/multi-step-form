@@ -24,7 +24,7 @@ function StepFourFooter() {
 
   return (
     <StepFourFooterStyle>
-      <ButtonGoBack onClick={() => navigate("/Add-ons")}>Go Back</ButtonGoBack>
+      <ButtonGoBack onClick={() => navigate("/add-ons")}>Go Back</ButtonGoBack>
       <ButtonConfirm onClick={() => navigate("/confirm")}>
         Confirm
       </ButtonConfirm>

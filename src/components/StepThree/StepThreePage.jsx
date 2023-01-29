@@ -40,13 +40,7 @@ function StepThreePage() {
   useEffect(() => {
     dispatch(setActiveStepAction("3"));
 
-    if (!valueName) {
-      navigate("/");
-    }
-    if (!valueEmail) {
-      navigate("/");
-    }
-    if (!valuePhone) {
+    if (!valueName || !valueEmail || !valuePhone) {
       navigate("/");
     }
   }, [dispatch, navigate, valueName, valueEmail, valuePhone]);

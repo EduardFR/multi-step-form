@@ -59,7 +59,7 @@ function SelectedPlan({ billing, activePlan }) {
           <PlanName>
             {plan.name}({billing})
           </PlanName>
-          <ChangePlan to="/Select-plan">Change</ChangePlan>
+          <ChangePlan to="/select-plan">Change</ChangePlan>
         </PlanBlock>
         <PlanPrice>
           ${isMonthly() ? plan.price.monthly : plan.price.yearly}/

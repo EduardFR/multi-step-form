@@ -21,9 +21,9 @@ function App() {
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<StepOnePage />} />
-            <Route path="Select-plan" element={<StepTwoPage />} />
-            <Route path="Add-ons" element={<StepThreePage />} />
-            <Route path="Summary" element={<StepFourPage />} />
+            <Route path="select-plan" element={<StepTwoPage />} />
+            <Route path="add-ons" element={<StepThreePage />} />
+            <Route path="summary" element={<StepFourPage />} />
             <Route path="confirm" element={<StepFivePage />} />
           </Route>
         </Routes>

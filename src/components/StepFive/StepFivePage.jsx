@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import ConfirmImage from "./ConfirmImage";
@@ -26,23 +26,16 @@ const StepFivePageStyle = styled.div`
 
 function StepFivePage() {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   const valueName = useSelector((state) => state.registr.name.value);
   const valueEmail = useSelector((state) => state.registr.email.value);
   const valuePhone = useSelector((state) => state.registr.phone.value);
 
   useEffect(() => {
-    if (!valueName) {
+    if (!valueName || !valueEmail || !valuePhone) {
       navigate("/");
     }
-    if (!valueEmail) {
-      navigate("/");
-    }
-    if (!valuePhone) {
-      navigate("/");
-    }
-  }, [dispatch, navigate, valueName, valueEmail, valuePhone]);
+  }, [navigate, valueName, valueEmail, valuePhone]);
 
   return (
     <StepFivePageStyle>

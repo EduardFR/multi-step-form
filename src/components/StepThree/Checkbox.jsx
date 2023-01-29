@@ -8,7 +8,7 @@ const CheckboxLabel = styled.label`
 `;
 
 const CheckboxSpan = styled.span`
-  -webkit-user-select: none;
+  user-select: none;
   position: absolute;
   text-align: center;
   border-radius: 4px;
