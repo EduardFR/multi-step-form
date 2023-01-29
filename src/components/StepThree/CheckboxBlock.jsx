@@ -3,7 +3,7 @@ import Checkbox from "./Checkbox";
 import CheckboxContent from "./CheckboxContent";
 
 const CheckboxBlockStyle = styled.label`
-  -webkit-user-select: none;
+  user-select: none;
   display: flex;
   align-items: center;
   padding: 16px 24px 17.5px;
