@@ -6,7 +6,7 @@ import ToggleSwitchBlock from "./ToggleSwitchBlock";
 const StepTwoBodyStyle = styled.div`
   display: flex;
   flex-direction: column;
-  row-gap: 32px;
+  row-gap: 15px;
   @media ${(props) => props.theme.media.phone} {
     margin-right: 16px;
     margin-left: 16px;

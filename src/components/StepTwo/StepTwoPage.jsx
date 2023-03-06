@@ -15,7 +15,7 @@ const StepTwoPageStyle = styled.div`
   margin-top: 40px;
   margin-right: 84px;
   @media ${(props) => props.theme.media.tablet} {
-    grid-template-rows: 68px 354px 48px;
+    grid-template-rows: 95px 327px 48px;
     margin-right: 0;
     margin-top: 0;
   }
