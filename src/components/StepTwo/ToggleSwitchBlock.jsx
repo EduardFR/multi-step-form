@@ -38,6 +38,14 @@ const Yearly = styled.label`
 function ToggleSwitchBlock({ billing }) {
   const dispatch = useDispatch();
 
+  const onClick = () => {
+    if (billing === "Yearly") {
+      dispatch(changeBillingAction("Monthly"));
+    } else {
+      dispatch(changeBillingAction("Yearly"));
+    }
+  };
+
   const onChange = (e) => {
     if (e.target.checked) {
       dispatch(changeBillingAction("Yearly"));
@@ -56,6 +64,7 @@ function ToggleSwitchBlock({ billing }) {
       </Monthly>
       <ToggleSwitch
         onChange={onChange}
+        onClick={onClick}
         checked={billing === "Yearly" ? true : false}
       />
       <Yearly

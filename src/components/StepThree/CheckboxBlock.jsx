@@ -2,14 +2,16 @@ import styled from "styled-components";
 import Checkbox from "./Checkbox";
 import CheckboxContent from "./CheckboxContent";
 
-const CheckboxBlockStyle = styled.label`
+const CheckboxBlockStyle = styled.button`
   user-select: none;
+  background: none;
   display: flex;
   align-items: center;
   padding: 16px 24px 17px;
   border: 1px solid var(--color-Border);
   border-radius: 8px;
   &.active {
+    border: 1px solid var(--color-Purple);
     background: var(--color-VeryLightGrey);
   }
   @media ${(props) => props.theme.media.tablet} {
@@ -20,17 +22,13 @@ const CheckboxBlockStyle = styled.label`
   }
 `;
 
-function CheckboxBlock({ name, text, price, onChange, abbreviation, select }) {
+function CheckboxBlock({ name, text, price, onClick, abbreviation, select }) {
   return (
     <CheckboxBlockStyle
-      htmlFor={`addition-checkbox-${name}`}
+      onClick={() => onClick(name)}
       className={select ? "active" : ""}
     >
-      <Checkbox
-        name={name}
-        onChange={onChange}
-        select={select ? true : false}
-      />
+      <Checkbox name={name} select={select ? true : false} />
       <CheckboxContent
         name={name}
         text={text}

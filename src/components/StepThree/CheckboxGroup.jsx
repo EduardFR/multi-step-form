@@ -35,8 +35,8 @@ function CheckboxGroup() {
     return billing === "Monthly";
   };
 
-  const onChange = (checked, name) => {
-    if (checked) {
+  const onClick = (name) => {
+    if (!selectedAdditions.includes(name)) {
       dispatch(selectedAdditionAction(name));
     } else {
       dispatch(unselectedAdditionAction(name));
@@ -51,7 +51,7 @@ function CheckboxGroup() {
           name={addition.name}
           text={addition.text}
           select={selectedAdditions.includes(addition.name)}
-          onChange={onChange}
+          onClick={onClick}
           price={isMonthly() ? addition.price.monthly : addition.price.yearly}
           abbreviation={
             isMonthly()

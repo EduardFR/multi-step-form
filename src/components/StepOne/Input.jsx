@@ -42,6 +42,9 @@ const InputStyle = styled(ReactInputMask)`
     font-weight: 500;
     line-height: 25px;
   }
+  &:focus {
+    border: 1px solid var(--color-Purple);
+  }
   &.error {
     border: 1px solid var(--color-Red);
   }

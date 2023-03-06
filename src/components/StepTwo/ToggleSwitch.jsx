@@ -4,7 +4,7 @@ const ToggleSwitchCheckbox = styled.input`
   height: 0;
   width: 0;
   visibility: hidden;
-  &:checked + span {
+  &:checked + button {
     left: calc(100% - 15px);
   }
 `;
@@ -22,18 +22,19 @@ const ToggleSwitchLabel = styled.label`
   position: relative;
 `;
 
-const ToggleSwitchButton = styled.span`
+const ToggleSwitchButton = styled.button`
   position: absolute;
   top: 4px;
   left: 4px;
   width: 12px;
   height: 12px;
   background-color: var(--color-White);
+  border: none;
   border-radius: 50px;
   transition: 0.2s;
 `;
 
-function ToggleSwitch({ onChange, checked }) {
+function ToggleSwitch({ onChange, onClick, checked }) {
   return (
     <ToggleSwitchLabel>
       <ToggleSwitchCheckbox
@@ -42,7 +43,7 @@ function ToggleSwitch({ onChange, checked }) {
         checked={checked}
         onChange={(e) => onChange(e)}
       />
-      <ToggleSwitchButton />
+      <ToggleSwitchButton onClick={() => onClick()} />
     </ToggleSwitchLabel>
   );
 }

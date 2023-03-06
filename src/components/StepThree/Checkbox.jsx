@@ -28,19 +28,13 @@ const CheckboxStyle = styled.input`
 `;
 
 const Check = styled(CheckSVG)`
-  margin-bottom: 1px;
+  margin-bottom: -2px;
 `;
 
-function Checkbox({ onChange, name, select }) {
+function Checkbox({ name, select }) {
   return (
     <CheckboxLabel>
-      <CheckboxStyle
-        id={`addition-checkbox-${name}`}
-        type="checkbox"
-        value={name}
-        checked={select}
-        onChange={(e) => onChange(e.target.checked, name)}
-      />
+      <CheckboxStyle type="checkbox" value={name} checked={select} readOnly />
       <CheckboxSpan>
         <Check />
       </CheckboxSpan>
