@@ -12,7 +12,6 @@ const TabStyle = styled.button`
   border-radius: 8px;
   background: none;
   overflow: hidden;
-  cursor: pointer;
   &:hover {
     border: 1px solid var(--color-Purple);
   }

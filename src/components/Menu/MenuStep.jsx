@@ -34,12 +34,15 @@ const StepContentStyle = styled.div`
 `;
 
 const StepTextStyle = styled.p`
+  text-transform: uppercase;
   color: var(--color-LightBlue);
   font-size: 12px;
   line-height: 14px;
 `;
 
-const StepTitleStyle = styled.h2``;
+const StepTitleStyle = styled.h2`
+  text-transform: uppercase;
+`;
 
 function MenuStep({ value, title, active }) {
   return (
@@ -48,7 +51,7 @@ function MenuStep({ value, title, active }) {
         {value}
       </StepCircleStyle>
       <StepContentStyle>
-        <StepTextStyle> STEP {value}</StepTextStyle>
+        <StepTextStyle> step {value}</StepTextStyle>
         <StepTitleStyle> {title} </StepTitleStyle>
       </StepContentStyle>
     </MenuStepStyle>

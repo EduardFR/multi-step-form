@@ -13,7 +13,6 @@ const ToggleSwitchLabel = styled.label`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  cursor: pointer;
   width: 38px;
   height: 20px;
   margin: 14px 24px;

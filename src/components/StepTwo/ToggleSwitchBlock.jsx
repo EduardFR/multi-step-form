@@ -13,7 +13,6 @@ const ToggleSwitchBlockStyle = styled.div`
 `;
 
 const Monthly = styled.label`
-  cursor: pointer;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
@@ -24,7 +23,6 @@ const Monthly = styled.label`
   }
 `;
 const Yearly = styled.label`
-  cursor: pointer;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;

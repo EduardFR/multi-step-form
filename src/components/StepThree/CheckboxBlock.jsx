@@ -10,6 +10,9 @@ const CheckboxBlockStyle = styled.button`
   padding: 16px 24px 17px;
   border: 1px solid var(--color-Border);
   border-radius: 8px;
+  &:hover {
+    border: 1px solid var(--color-Purple);
+  }
   &.active {
     border: 1px solid var(--color-Purple);
     background: var(--color-VeryLightGrey);

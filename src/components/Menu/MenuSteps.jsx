@@ -25,10 +25,10 @@ function MenuSteps() {
 
   return (
     <MenuStepsStyle>
-      <MenuStep value="1" title="YOUR INFO" active={step === "1"} />
-      <MenuStep value="2" title="SELECT PLAN" active={step === "2"} />
-      <MenuStep value="3" title="ADD-ONS" active={step === "3"} />
-      <MenuStep value="4" title="SUMMARY" active={step === "4"} />
+      <MenuStep value="1" title="your info" active={step === "1"} />
+      <MenuStep value="2" title="select plan" active={step === "2"} />
+      <MenuStep value="3" title="add-ons" active={step === "3"} />
+      <MenuStep value="4" title="summary" active={step === "4"} />
     </MenuStepsStyle>
   );
 }

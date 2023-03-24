@@ -36,6 +36,9 @@ const InputStyle = styled(ReactInputMask)`
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
+  &:hover {
+    border: 1px solid var(--color-Purple);
+  }
   &::placeholder {
     color: var(--color-Grey);
     font-size: 16px;
